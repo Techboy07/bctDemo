@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Platform.OS === "android" ? 15 : 0,
     width: "100%",
-    paddingHorizontal: 18,
+    paddingHorizontal: 10,
   },
   header: {
     margin: 0,

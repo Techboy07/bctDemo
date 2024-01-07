@@ -5,42 +5,43 @@ import blue from "../assets/clickhereBlue.png";
 import gold from "../assets/clickHereGold.png";
 import sky from "../assets/ClickhereSky.png";
 
+const myOptions = [
+  {
+    headtext: "Assignment",
+    image: null,
+    background: "#BFFDDC",
+  },
+  {
+    headtext: "Assignment",
+    image: blue,
+    background: "#DDE7FF",
+  },
+  {
+    headtext: "Assignment",
+    image: gold,
+    background: "#F2F8B3",
+  },
+  {
+    headtext: "Assignment",
+    image: sky,
+    background: "#CAF3FE",
+  },
+];
+
 const OptionsWrapper = () => {
   return (
     <View style={styles.container}>
-      <OptionComponent
-        header={"Assignment"}
-        para={
-          "Youe dolor. Morbi consectetur vestibulum turYoue dolor. Morbi consectetur consectetur vestibulum t"
-        }
-        background={"#BFFDDC"}
-        image={null}
-      />
-
-      <OptionComponent
-        header={"Courses"}
-        para={
-          "Youe dolor. Morbi consectetur vestibulum turYoue dolor. Morbi consectetur consectetur vestibulum t"
-        }
-        background={"#DDE7FF"}
-        image={blue}
-      />
-      <OptionComponent
-        header={"Timetable"}
-        para={
-          "Youe dolor. Morbi consectetur vestibulum turYoue dolor. Morbi consectetur consectetur vestibulum t"
-        }
-        background={"#F2F8B3"}
-        image={gold}
-      />
-      <OptionComponent
-        header={"Quizzes"}
-        para={
-          "Youe dolor. Morbi consectetur vestibulum turYoue dolor. Morbi consectetur consectetur vestibulum t"
-        }
-        background={"#CAF3FE"}
-        image={sky}
-      />
+      {myOptions.map((elem, idx) => (
+        <OptionComponent
+          header={elem.headtext}
+          para={
+            "Youe dolor. Morbi consectetur vestibulum turYoue dolor. Morbi consectetur consectetur vestibulum t"
+          }
+          background={elem.background}
+          image={elem.image}
+          key={idx}
+        />
+      ))}
     </View>
   );
 };
